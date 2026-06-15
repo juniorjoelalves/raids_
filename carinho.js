@@ -1,3 +1,6 @@
+// Substitua o número abaixo pelo seu WhatsApp (com DDD, apenas números)
+const WHATSAPP_NUMERO = "5541999999999"; 
+
 let carrinho = JSON.parse(localStorage.getItem('carrinhoRaids')) || [];
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -109,17 +112,19 @@ function injetarPainelCarrinho() {
     painel.style.cssText = "position: fixed; bottom: 20px; right: 20px; background: white; border: 2px solid #333; padding: 15px; border-radius: 8px; box-shadow: 0px 4px 10px rgba(0,0,0,0.3); z-index: 9999; width: 280px; font-family: Arial, sans-serif; color: #333; display: block;";
     painel.innerHTML = `
         <h3 style="margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 5px; display: flex; justify-content: space-between;"><span>🛒 Seu Carrinho</span></h3>
-        <ul id="lista-itens-carrinho" style="list-style: none; padding: 0; max-height: 180px; overflow-y: auto; margin: 10px 0;"></ul>
+        <ul id="lista-itens-carrinho" style="list-style: none; padding: 0; max-height: 140px; overflow-y: auto; margin: 10px 0;"></ul>
         
         <div style="margin: 10px 0;">
             <label for="obs-carrinho" style="font-size: 12px; font-weight: bold; display: block; margin-bottom: 4px;">Observações do Pedido:</label>
-            <textarea id="obs-carrinho" placeholder="Ex: Sem cebola, ponto da carne, sabor do refri..." style="width: 100%; height: 50px; border: 1px solid #ccc; border-radius: 4px; padding: 5px; font-size: 12px; resize: none; box-sizing: border-box; font-family: Arial, sans-serif;"></textarea>
+            <textarea id="obs-carrinho" placeholder="Ex: Sem cebola, ponto da carne, sabor do refri..." style="width: 100%; height: 45px; border: 1px solid #ccc; border-radius: 4px; padding: 5px; font-size: 12px; resize: none; box-sizing: border-box; font-family: Arial, sans-serif;"></textarea>
         </div>
 
-        <div style="font-weight: bold; margin-top: 10px; border-top: 2px solid #eee; padding-top: 10px;">
-            Total: R$ <span id="valor-total-carrinho">0,00</span>
+        <div style="font-weight: bold; margin-top: 10px; border-top: 2px solid #eee; padding-top: 10px; display: flex; justify-content: space-between;">
+            <span>Total:</span> <span>R$ <span id="valor-total-carrinho">0,00</span></span>
         </div>
-        <button id="btn-limpar-carrinho" style="margin-top: 10px; width: 100%; background: #ff4d4d; color: white; border: none; padding: 5px; border-radius: 4px; cursor: pointer;">Limpar Carrinho</button>
+        
+        <button id="btn-finalizar-pedido" style="margin-top: 10px; width: 100%; background: #25d366; color: white; border: none; padding: 8px; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 14px;">Finalizar Pedido (WhatsApp)</button>
+        <button id="btn-limpar-carrinho" style="margin-top: 5px; width: 100%; background: #ff4d4d; color: white; border: none; padding: 5px; border-radius: 4px; cursor: pointer; font-size: 12px;">Limpar Carrinho</button>
     `;
     document.body.appendChild(painel);
 
@@ -136,6 +141,8 @@ function injetarPainelCarrinho() {
         salvarCarrinho();
         atualizarInterfaceCarrinho();
     });
+
+    document.getElementById('btn-finalizar-pedido').addEventListener('click', finalizarPedido);
 }
 
 function atualizarInterfaceCarrinho() {
@@ -153,4 +160,30 @@ function atualizarInterfaceCarrinho() {
         listaHtml.appendChild(li);
     });
     totalHtml.textContent = valorTotal.toFixed(2).replace('.', ',');
+}
+
+function finalizarPedido() {
+    if (carrinho.length === 0) {
+        alert("Seu carrinho está vazio!");
+        return;
+    }
+
+    let textoMensagem = "Olá! Gostaria de fazer o seguinte pedido:\n\n";
+    let valorTotal = 0;
+
+    carrinho.forEach(item => {
+        const subtotal = item.preco * item.quantidade;
+        valorTotal += subtotal;
+        textoMensagem += `*${item.quantidade}x* ${item.nome} - R$ ${subtotal.toFixed(2).replace('.', ',')}\n`;
+    });
+
+    const obs = document.getElementById('obs-carrinho').value.trim();
+    if (obs) {
+        textoMensagem += `\n*Observações:* ${obs}\n`;
+    }
+
+    textoMensagem += `\n*Total do Pedido:* R$ ${valorTotal.toFixed(2).replace('.', ',')}`;
+
+    const linkWhatsapp = `https://whatsapp.com{WHATSAPP_NUMERO}&text=${encodeURIComponent(textoMensagem)}`;
+    window.open(linkWhatsapp, '_blank');
 }
