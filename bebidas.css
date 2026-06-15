@@ -1,0 +1,143 @@
+.body{
+    background-image: linear-gradient(black, yellow);
+}
+.pricipal{
+   align-items:end;
+   background-color: #000000;
+}
+.container{
+    display: block;
+    justify-content:flex-start;
+    align-items: flex-start;
+}
+.detalhe{
+    color:#ff0000;
+    text-align: center;
+    font-size: 30px;
+}
+  .butao_voltar{
+    background-color: green;
+    color: white;
+    border-radius: 50px;
+    font-size: 25px;
+  }
+.container_texto{
+    text-align: center;
+    display: block;
+    color: #ff0000;
+    font-size: 70px;
+}
+.container_bebidas{
+    border-radius: 200px;
+    width: 25%;
+    height: auto;
+    margin-left: 37%;
+}
+.menu{
+    font-size: 25px;
+    color: #ff0000;
+    text-align: center;
+}
+.coca_img{
+    border-radius: 50px;
+    width: 200px;
+    height: auto;
+}
+.coca_lata{
+    gap: 50px;
+    border-radius: 50px;
+    margin: 20px;
+    padding: 20px;
+    color: #ff0000;
+    display: flex;
+    background-color: #000000a1;
+}
+.carinho_coca{
+    background-color: green;
+    color: white;
+    border-radius: 50px;
+    font-size: 25px;
+    margin-left: -10%;
+    margin-top: 30%;
+}
+.coca_nome{
+    font-size: 35px;
+    margin-top: 5%;
+}
+.Sobremesas{
+    color: #ff0000;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10%; 
+    margin-bottom: 30px;
+    font-size: 35px ;
+    margin-left: 25%;
+}
+.carinho_sobremesas{
+    background-color: green;
+    color: white;
+    border-radius: 50px;
+    font-size: 35px;
+}
+.sorvetes{
+    color: #ff0000;
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 25px ;
+}
+.sorvetes_img{
+    border-radius: 50px;
+    width: 25%;
+    height: auto;
+}
+.Milkshake{
+    color: #ff0000;
+    display: block;
+    text-align: center;
+    font-size: 25px ;
+}
+.milkshake_img{
+    border-radius: 50px;
+    width: 25%;
+    height: auto;
+}
+.milkshake{
+    color: #ff0000;
+    display: flex;
+    font-size: 35px ;
+    align-items: center;
+    justify-content: center;
+    gap: 20%;
+}
+.rodape{
+    text-align: center;
+    margin: 5em 3em; 
+}
+.rodape_lista{
+    color: white;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    text-decoration: none;
+    margin: 3em 0em;
+}
+.lista_link a{
+    text-decoration: none;
+    color: var(--branco-pincipal);
+    margin-left: 1.5em;
+}
+.rodape_texto{
+    margin: 1em 0;
+    font-size: 14px;
+    color: red;
+}
+.rodape_logo{
+    border-radius: 200px;
+   width: 15%;
+   height: auto;
+}
+.lista_link a:hover{
+    color: blue;
+}
