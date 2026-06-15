@@ -1,5 +1,5 @@
-// Substitua o número abaixo pelo seu WhatsApp (com DDD, apenas números)
-const WHATSAPP_NUMERO = "5541999999999"; 
+
+const WHATSAPP_NUMERO = ""; 
 
 let carrinho = JSON.parse(localStorage.getItem('carrinhoRaids')) || [];
 
