@@ -1,0 +1,214 @@
+.body{
+  background-image: linear-gradient(black, yellow);
+  }
+.pricipal{
+   align-items:end;
+   background-color: #000000;
+  }
+.detalhe{
+    text-align: center;
+  }
+.butao_voltar{
+    background-color: green;
+    color: white;
+    border-radius: 50px;
+    font-size: 25px;
+  }
+.container{
+    display: block;
+    justify-content:flex-start;
+    align-items: flex-start;
+}
+  
+.container_texto{
+    text-align: center;
+    display: block;
+    color: #ff0000;
+    font-size: 70px;
+ }
+.container_hamburguer{
+    border-radius: 200px;
+    width: 25%;
+    height: auto;
+    margin-left: 37%;
+}
+.menu{
+    font-size: 25px;
+    color: #ff0000;
+    text-align: center;
+}
+.nome_do_hamburguer{
+    margin-top: 7%;
+    color: #ff0000;
+    font-size: 30px;
+    margin-left: 5%;
+}
+.produto{
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+    margin-bottom: 30px;
+    background-color: #0000009e;
+}
+.produto{
+    display: block;
+    color: #ff0000;
+    margin-left: 25%;
+    margin-top: -13%;
+    font-size: 20px;
+}
+.carinho{
+    background-color: green;
+    color: white;
+    border-radius: 50px;
+    font-size: 35px;
+    margin-left: 20%;
+}
+.combo_kids{
+    width: 20%;
+    height: auto; 
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+    margin-bottom: 30px;
+}
+.kids{
+    background-color: #00000090;
+    color: #ff0000;
+    font-size: 25px;
+    text-align: center;
+    margin-top: -20%;
+}
+.carinho_kids{
+    background-color: green;
+    color: white;
+    border-radius: 50px;
+    font-size: 35px;
+    margin-left: -1%;
+}
+.combo_familia{
+    width: 25%;
+    height: auto; 
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+    margin-bottom: 30px;
+}
+.familia{
+    background-color: #00000090;
+    color: #ff0000;
+    font-size: 25px;
+    text-align: center;
+    margin-top: -15%;
+    margin-left: 9%;
+}
+.carinho_familia{
+    background-color: green;
+    color: white;
+    border-radius: 50px;
+    font-size: 35px;
+    margin-left: -10%;
+    text-align: center;
+}
+.casal{
+    background-color: #00000090;
+    color: #ff0000;
+    font-size: 25px;
+    text-align: center;
+    margin-top: -15%;
+    margin-left: 15%;
+}
+.top{
+    background-color: #00000090;
+    color: #ff0000;
+    font-size: 20px;
+    text-align: center;
+    margin-top: -15%;
+    margin-left: 11%;
+}
+.carinho_top{
+    background-color: green;
+    color: white;
+    border-radius: 50px;
+    font-size: 35px;
+    margin-left: -5%;
+}
+.rodape{
+    text-align: center;
+    margin: 5em 3em; 
+  
+}
+.rodape_lista{
+    color: white;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    text-decoration: none;
+    margin: 3em 0em;
+}
+.lista_link a{
+    text-decoration: none;
+    color: var(--branco-pincipal);
+    margin-left: 1.5em;
+}
+.rodape_texto{
+    margin: 1em 0;
+    font-size: 14px;
+    color: red;
+}
+.rodape_logo{
+    border-radius: 200px;
+    width: 15%;
+    height: auto;
+}
+.lista_link a:hover{
+    color: blue;
+  }
+  
+.main {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+  
+.produtos, .carrinho {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+  
+.produto {
+    border-bottom: 1px solid #ff0000;
+    padding: 15px 0;
+}
+  
+.button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+  
+button:hover {
+   background-color: #218838;
+}
+ 
+.carrinho ul {
+    list-style: none;
+    margin: 15px 0;
+}
+  
+.carrinho li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,112 @@
+
+.body{
+   background-image: linear-gradient(black, yellow);
+}
+.pricipal{
+ align-items:end;
+  background-color: #000000;
+}
+.container{
+    display: block;
+    justify-content:flex-start;
+    align-items: flex-start;
+}
+.container_logo{
+    display: block;
+    text-align:start;
+    color: #ff0000;
+    font-size: 25px;
+    padding: 2em;
+}
+.container_img{
+  border-radius: 200px;
+  width: 15%;
+   height: auto;
+}
+.container_Nome{
+    text-align: center;
+    margin-right: 55%;
+    margin-top: -15%;
+}
+.item{
+    border-bottom: 5px solid #ffffff;
+    margin-top: 11%;
+}
+.Menu{
+    color: #ff0000;
+    margin-left: 80%;
+    margin-top: -6%;
+    font-size: 22px;
+}
+.secundario{
+    color:#ff0000;
+    text-align: center;
+}
+.titulo_secundario{
+    font-size: 59px;
+}
+.sobre_secundario{
+    font-size: 29px;
+}
+.Cardapio_secundario{
+    font-size: 70px;
+    color: #ff0000;
+}
+.linha_combos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 10px;
+}
+.Cardapio_combos{
+    font-size: 42px;
+}
+.combos_opcoes{
+    font-size: 42px;
+    color: #ffffff;
+    background-color: #000000;
+    border-bottom: solid #ff0000;
+    border-radius: 50px;
+}
+.parcerias{
+    font-size: 43px;
+}
+.container_parcerias{
+    margin-top: 10px;
+    border-radius: 200px;
+    width: 15%;
+    height: auto;
+    margin: 20px;
+    padding: 70px;
+}
+.rodape{
+    text-align: center;
+    margin: 5em 3em; 
+}
+.rodape_lista{
+    color: white;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    text-decoration: none;
+    margin: 3em 0em;
+}
+.lista_link a{
+    text-decoration: none;
+    color: var(--branco-pincipal);
+    margin-left: 1.5em;
+}
+.rodape_texto{
+    margin: 1em 0;
+    font-size: 14px;
+    color: red;
+}
+.rodape_logo{
+    border-radius: 200px;
+   width: 15%;
+   height: auto;
+}
+.lista_link a:hover{
+    color: blue;
+}
