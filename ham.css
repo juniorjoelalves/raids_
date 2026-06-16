@@ -43,8 +43,12 @@
     font-size: 30px;
     margin-left: 5%;
 }
+.hamburguer{
+    width: 20%;
+    height: auto;
+}
 .produto{
-    border-radius: 50px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     gap: 20px; 
@@ -174,7 +178,7 @@
     padding: 20px;
 }
   
-.produtos, .carrinho {
+ .carrinho {
     flex: 1;
     background: #fff;
     padding: 20px;
